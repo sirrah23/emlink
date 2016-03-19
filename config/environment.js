@@ -1,9 +1,12 @@
 /* jshint node: true */
+var fb = require('../fb.json');
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'em-link',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: fb.link,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
