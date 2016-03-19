@@ -8,3 +8,11 @@
     <button {{action 'shortenLink'}} type="submit" class="btn btn-default">Submit</button>
     </div>
 </form>
+
+{{#each model as |link|}}
+    <div class="form-group col-md-4 col-md-offset-4 clearfix well">
+        {{link.short}} <br/>
+        {{link.actual}}<br/>
+        {{link.created}}
+    </div>
+{{/each}}
