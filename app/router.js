@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('short', function() {
     this.route('new');
   });
+  this.route('red', {path: '/red/:short_str'});
 });
 
 export default Router;
