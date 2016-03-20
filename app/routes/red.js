@@ -4,9 +4,6 @@ export default Ember.Route.extend({
   model(){
     return this.store.findAll('link');
   },
-  //redirect: function(sendTo) {
-  //  window.location.replace(sendTo);
-  //},
   afterModel(model, transition){
     //Link that the user wants to go to
     var short_link = 'http://localhost:4200/red/' + transition.params.red.short_str;
